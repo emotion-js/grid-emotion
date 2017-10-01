@@ -1,5 +1,7 @@
 # grid-emotion
 
+[![Build Status](https://travis-ci.org/emotion-js/grid-emotion.svg?branch=master)](https://travis-ci.org/emotion-js/grid-emotion)
+
 > Responsive React grid system built with emotion
 
 grid-emotion is a wrapper around [grid-styled](https://github.com/jxnblk/grid-styled) that uses [emotion](https://github.com/emotion-js/emotion) instead of [styled-components](https://github.com/styled-components/styled-components).

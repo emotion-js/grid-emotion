@@ -1,6 +1,6 @@
 {
   "name": "grid-emotion",
-  "version": "2.0.0-11",
+  "version": "2.1.0",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "author": "Brent Jackson",

@@ -15,21 +15,20 @@ export default {
     babel({
       presets: [
         [
-          'env',
+          '@babel/env',
           {
             loose: true,
             modules: false
           }
         ],
-        'stage-0',
-        'react'
+        '@babel/stage-0',
+        '@babel/react'
       ],
-      plugins: ['external-helpers', 'emotion'],
-      babelrc: false,
-      externalHelpersWhitelist: ['extends']
+      plugins: ['emotion'],
+      babelrc: false
     }),
     alias({
-      'styled-components': 'react-emotion'
+      'styled-components': require.resolve('./styled-alias')
     })
   ],
   output: [

@@ -3,7 +3,7 @@ import React from 'react'
 import { sheet } from 'emotion'
 import serializer from 'jest-glamor-react'
 import { create as render } from 'react-test-renderer'
-import { Box, Grid, Flex } from './dist/index.cjs.js'
+import { Box, Flex, div } from './dist/index.cjs.js'
 
 expect.addSnapshotSerializer(serializer(sheet))
 
@@ -16,23 +16,6 @@ test('Box renders', () => {
 test('Box renders with props', () => {
   const json = render(<Box m={[1, 2]} px={[1, 2]} w={1} flex="1 1 auto" />)
   expect(json).toMatchSnapshot()
-})
-
-test('Box renders with `is` prop', () => {
-  const json = render(<Box is="section" />).toJSON()
-  expect(json).toMatchSnapshot()
-  expect(json.type).toBe('section')
-})
-
-// Grid
-test('Grid renders', () => {
-  const grid = render(<Grid />)
-  expect(grid).toMatchSnapshot()
-})
-
-test('Grid has a classname', () => {
-  const div = render(<Grid />).toJSON()
-  expect(div.props.className).toBeTruthy()
 })
 
 // Flex
@@ -63,4 +46,33 @@ test('Flex renders with responsive props', () => {
     />
   )
   expect(flex).toMatchSnapshot()
+})
+
+// div
+test('div removes grid-styled props', () => {
+  const json = render(
+    React.createElement(div, {
+      id: 'hi',
+      className: 'beep',
+      width: 0.5,
+      color: 'blue',
+      fontSize: 4,
+      wrap: true
+    })
+  ).toJSON()
+  expect(json.props.id).toEqual('hi')
+  expect(json.props.className).toEqual('beep')
+  expect(json.props.width).toEqual(undefined)
+  expect(json.props.color).toEqual(undefined)
+  expect(json.props.fontSize).toEqual(undefined)
+  expect(json.props.wrap).toEqual(undefined)
+})
+
+test('div accepts an is prop to change elements', () => {
+  const json = render(
+    React.createElement(div, {
+      is: 'h2'
+    })
+  ).toJSON()
+  expect(json.type).toBe('h2')
 })

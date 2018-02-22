@@ -5,9 +5,7 @@
   "module": "dist/index.es.js",
   "author": "Brent Jackson",
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.32",
     "@babel/plugin-external-helpers": "^7.0.0-beta.32",
@@ -48,9 +46,9 @@
     "rollup-plugin-babel": "4.0.0-beta.0"
   },
   "dependencies": {
+    "clean-tag": "^1.0.3",
     "prop-types": "^15.6.0",
-    "styled-system": "^2.1.0",
-    "tag-hoc": "^1.0.0"
+    "styled-system": "^2.1.0"
   },
   "peerDependencies": {
     "emotion": "8 || 9",

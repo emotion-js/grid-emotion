@@ -9,7 +9,7 @@ export default {
     'styled-system',
     'prop-types',
     'react-emotion',
-    'tag-hoc'
+    'clean-tag'
   ],
   plugins: [
     babel({

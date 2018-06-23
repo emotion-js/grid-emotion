@@ -1,3 +1,5 @@
+# DEPRECATED
+## grid-styled now supported emotion
 # grid-emotion
 
 [![Build Status](https://travis-ci.org/emotion-js/grid-emotion.svg?branch=master)](https://travis-ci.org/emotion-js/grid-emotion)

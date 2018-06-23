@@ -1,5 +1,5 @@
 # DEPRECATED
-## grid-styled now supports emotion
+## grid-styled now supports emotion so this package isn't necessary
 # grid-emotion
 
 [![Build Status](https://travis-ci.org/emotion-js/grid-emotion.svg?branch=master)](https://travis-ci.org/emotion-js/grid-emotion)
